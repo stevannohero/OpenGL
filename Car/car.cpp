@@ -8,7 +8,6 @@ const GLuint WIDTH = 1280, HEIGHT = 800;
 
 int main() {
 	glfwInit();
-
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -20,10 +19,10 @@ int main() {
 	glfwGetFramebufferSize(window, &_width, &_height);
 
 	if (!window) {
-		cout << "WINDOW'S FAILED" << endl;
+		cout << "Failed to make window." << endl;
 		glfwTerminate();
 	} else {
-		cout << "WINDOW'S OK" << endl;
+		cout << "Window's successfully made." << endl;
 	}
 
 	glfwMakeContextCurrent(window);
@@ -34,11 +33,12 @@ int main() {
 	};
 
 	while (!glfwWindowShouldClose(window)) {
-		
+
 	}
 
 
 	glfwDestroyWindow(window);
 	glfwTerminate();
+
 	return 0;
 }
