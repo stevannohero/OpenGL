@@ -1,2 +1,2 @@
 all:
-	g++ Car/car.cpp Car -o -lglfw -framework OpenGL
+	g++ -o MainCar Car/car.cpp -lglfw -framework OpenGL
