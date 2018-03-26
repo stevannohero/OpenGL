@@ -13,24 +13,32 @@ int main() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-	GLFWwindow * window = glfwCreateWindow(WIDTH, HEIGHT, "car", NULL, NULL);
+	GLFWwindow * window = glfwCreateWindow(WIDTH, HEIGHT, "main", NULL, NULL);
 
-	int screenWidth, screenHeight;
-	glfwGetFramebufferSize(window, &screenWidth, &screenHeight);
+	int _width, _height;
+	glfwGetFramebufferSize(window, &_width, &_height);
 
-	if (window == NULL) {
+	if (!window) {
 		cout << "WINDOW'S FAILED" << endl;
 		glfwTerminate();
-		return 1;
 	} else {
 		cout << "WINDOW'S OK" << endl;
 	}
 
 	glfwMakeContextCurrent(window);
+	glViewport(0, 0, _width, _height);
+
+	GLfloat vertices[] =  {
+		
+	};
+
+	while (!glfwWindowShouldClose(window)) {
+		
+	}
 
 
-
+	glfwDestroyWindow(window);
+	glfwTerminate();
 	return 0;
 }
