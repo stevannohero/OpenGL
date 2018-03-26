@@ -5,7 +5,7 @@ Group project to make simple OpenGL implementation
 
 # IF3260 Computer Graphics
 Bandung Institute of Technology, 2018.
-Develeopers:
+Collaborators:
 - Stevanno
 - Yesa
 - Harum
